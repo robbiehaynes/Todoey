@@ -19,7 +19,7 @@ class TodoListViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        loadItems()
+        loadItems()
     }
 
     //MARK: - TableView Datasource Methods
@@ -84,16 +84,14 @@ class TodoListViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-//    func loadItems() {
-//        if let data = try? Data(contentsOf: dataFilePath!) {
-//            let decoder = PropertyListDecoder()
-//            do {
-//                items = try decoder.decode([Item].self, from: data)
-//            } catch {
-//                print("Error decoding items: \(error)")
-//            }
-//        }
-//    }
+    func loadItems() {
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        do {
+            items = try context.fetch(request)
+        } catch {
+            print("Error fetching items: \(error)")
+        }
+    }
     
 }
 
