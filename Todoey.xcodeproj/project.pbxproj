@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D43E5D252CE2637600628951 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D43E5D242CE2637600628951 /* RealmSwift */; };
+		D43E5D2F2CE2754700628951 /* SwipeCellKit in Frameworks */ = {isa = PBXBuildFile; productRef = D43E5D2E2CE2754700628951 /* SwipeCellKit */; };
 		EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4F9239524DB00FB933B /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43E5D2F2CE2754700628951 /* SwipeCellKit in Frameworks */,
 				D43E5D252CE2637600628951 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +119,7 @@
 			mainGroup = EB2BE4ED239524DB00FB933B;
 			packageReferences = (
 				D43E5D232CE2637600628951 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				D43E5D2D2CE2754700628951 /* XCRemoteSwiftPackageReference "SwipeCellKit" */,
 			);
 			productRefGroup = EB2BE4F7239524DB00FB933B /* Products */;
 			projectDirPath = "";
@@ -333,6 +336,14 @@
 				minimumVersion = 10.54.1;
 			};
 		};
+		D43E5D2D2CE2754700628951 /* XCRemoteSwiftPackageReference "SwipeCellKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwipeCellKit/SwipeCellKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -340,6 +351,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D43E5D232CE2637600628951 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		D43E5D2E2CE2754700628951 /* SwipeCellKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D43E5D2D2CE2754700628951 /* XCRemoteSwiftPackageReference "SwipeCellKit" */;
+			productName = SwipeCellKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
